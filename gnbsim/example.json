@@ -1,0 +1,62 @@
+{
+	"GlobalGNBID": {
+		"mcc": 208,
+		"mnc": 95,
+		"gnbid": 1
+	},
+	"SupportedTAList" : [
+		{
+			"TAC": "0x00a000",
+			"BroadcastPLMNList": [
+				{
+					"MCC": 208,
+					"MNC": 95,
+					"SliceSupportList": [
+						{
+							"SST": 1,
+							"SD": "583922"
+						}
+					]
+				}
+			]
+		}
+	],
+	"PagingDRX" : "v32",
+	"RANUENGAPID" : 0,
+	"UE": {
+		"imeisv": "35609204079514",
+		"msin": "0000000031",
+		"mcc": 208,
+		"mnc": 95,
+		"RoutingIndicator": 1234,
+		"ProtectionScheme": "null",
+		"AuthParam": {
+			"K": "0C0A34601D4F07677303652C0462535B",
+			"OPc": "63bfa50ee6523365ff14c1f45f88737d"
+		},
+		"snssai": {
+			"sst": 1,
+			"sd": "010203"
+		},
+		"dnn": "internet",
+		"url": "http://172.16.1.2:8080/"
+	},
+	"ULInfoNR": {
+		"NRCGI": {
+			"PLMN": {
+				"mcc": 208,
+				"mnc": 95
+			},
+			"NRCellID": 1
+		},
+		"TAI": {
+			"PLMN": {
+				"mcc": 208,
+				"mnc": 95
+			},
+			"TAC": "0x000001"
+		}
+	},
+	"GTPuAddr": "192.168.1.3",
+	"GTPuIFname": "eth0"
+}
