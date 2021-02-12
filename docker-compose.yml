@@ -2,12 +2,15 @@ version: '3.8'
 
 services:
     mysql:
-        image: oai5g/mysql:latest
+        image: mysql:latest
         container_name: mysql
         networks:
             public_net:
                 ipv4_address: 192.168.61.200
-
+        environment:
+            MYSQL_ROOT_PASSWORD: 'linux'
+        volumes:
+          - ./oai_db.sql:/oai_db.sql
     oai_smf:
         image: oai-smf:latest
         container_name: oai-smf
