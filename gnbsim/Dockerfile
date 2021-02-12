@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+	FROM ubuntu:bionic
 
 RUN apt-get update
 RUN apt-get install git wget make build-essential -y

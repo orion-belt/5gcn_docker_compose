@@ -102,11 +102,11 @@ services:
             public_net_sgi_lan:
                 ipv4_address: 192.168.63.197
         volumes:
-                 - ./upf_conf/init.conf:/init.conf
-                 - ./upf_conf/rc.local:/rc.local
-                 - ./upf_conf/startup_debug.conf:/startup_debug.conf
+                 - ./upf_conf/init.conf:/openair-upf/bin/init.conf
+                 - ./upf_conf/rc.local:/openair-upf/bin/rc.local
+                 - ./upf_conf/startup_debug.conf:/openair-upf/bin/startup_debug.conf
         entrypoint: /bin/bash -c \
-             ".scripts/rc.local; ./run.sh; sleep infinity"
+             "./rc.local; ./run.sh; sleep infinity"
 
     gnbsim:
         image: gnbsim:latest
@@ -118,7 +118,7 @@ services:
             public_net:
                 ipv4_address: 192.168.61.198
             public_net_sgi_lan:
-                ipv4_address: 192.168.64.198
+                ipv4_address: 192.168.63.198
         volumes:
                  - ./gnbsim_conf/gnb.conf:/gnbsim/example/example.json
         entrypoint: /bin/bash -c "cd /gnbsim/example/ && sleep infinity"
